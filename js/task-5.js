@@ -1,14 +1,21 @@
-Завдання 5
-Напиши функцію checkForSpam(message), приймаючу 1 параметр message - рядок. Функція перевіряє її на вміст слів spam і sale. Якщо знайшли заборонене слово, то функція повертає true, якщо заборонених слів немає функція повертає false. Слова в рядку можуть бути в довільному регістрі.
+// Завдання 5
+// Напиши функцію checkForSpam(message), приймаючу 1 параметр message - рядок. 
+// Функція перевіряє її на вміст слів spam і sale. Якщо знайшли заборонене слово, 
+// то функція повертає true, якщо заборонених слів немає функція повертає false. 
+// Слова в рядку можуть бути в довільному регістрі.
 
 const checkForSpam = function (message) {
-  // твій код
+  const checkText = message.toLowerCase();
+  if (checkText.includes('spam') || checkText.includes('sale')) {
+    return true;
+  }
+  return false;
 };
 
 /*
  * Викличи функції для перевірки працездатності твоєї реалізації.
  */
-console.log(checkForSpam('Latest technology news')); // false
+console.log(checkForSpam('Latest in  technology news')); // false
 
 console.log(checkForSpam('JavaScript weekly newsletter')); // false
 
