@@ -4,6 +4,7 @@
 // то функція повертає true, якщо заборонених слів немає функція повертає false. 
 // Слова в рядку можуть бути в довільному регістрі.
 
+'use strict';
 const checkForSpam = function (message) {
   const checkText = message.toLowerCase();
   if (checkText.includes('spam') || checkText.includes('sale')) {

@@ -3,6 +3,7 @@
 // Для цього створи функцію calculateEngravingPrice(message, pricePerWord) приймаючу рядок (в рядку будуть тільки слова і прогалини)
 //  і ціну гравіювання одного слова, і повертає ціну гравіювання всіх слів в рядку.
 
+'use strict';
 const calculateEngravingPrice = function (message, pricePerWord) {
   const array = message.split(' ');
   return array.length * pricePerWord;

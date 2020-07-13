@@ -2,6 +2,7 @@
 // Напиши функцію findLongestWord(string), яка приймає параметром довільний рядок 
 // (в рядку будуть тільки слова і прогалини) і повертає найдовше слово в цьому рядку.
 
+'use strict';
 const findLongestWord = function (string) {
   const array = string.split(' ');
         console.log(array);

@@ -5,6 +5,7 @@
 // Якщо довжина більше 40 символів, то функція обрізає рядок до 40-ка символів 
 // і додає в кінець рядка три крапки '...', після чого повертає   укорочену версію.
 
+'use strict';
 const formatString = function (string) {
   console.log(string.length);
   if (string.length > 40) {
