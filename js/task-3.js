@@ -4,30 +4,28 @@
 
 'use strict';
 const findLongestWord = function (string) {
+  let maxLength = 0;
+  let longestWord;
+  let i = 1;
   const array = string.split(' ');
-        console.log(array);
-        
-        console.log(Math.max(for (let i = 0; i < array.length; i += 1) {
-          array[i].length
-        }));
-          // console.log((array[i].length));
-          let a[i] = Math.max(array[i].length);
-          console.log(a[i])
-          // console.log(Math.max(array[i].length));
-          //     if (Math.max(array[i].length)) {
-            // console.log(Math.max(array[i]));
-            // console.log(array[i]);
-//     }
-  });
-};
+  console.log(array);
 
-/*
-* Виклич функції для перевірки працездатності твоєї реалізації.
-*/
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+  for (i = 0; i < array.length; i += 1) {
+    if (maxLength < array[i].length) {
+      maxLength = array[i].length;
+      longestWord = array[i];
+    } else {
+    continue;
+    }
+  }
+  console.log('maxLength', maxLength);
+  return longestWord;
+}
 
-// console.log(findLongestWord('Google do a roll')); // 'Google'
+// Виклич функції для перевірки працездатності твоєї реалізації.
 
-// console.log(findLongestWord('May the force be with you')); // 'force'
+console.log('longestWord:', findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
 
-// console.log (Math.max(100, 20, 30))
+console.log('longestWord:', findLongestWord('Google do a roll')); // 'Google'
+
+console.log('longestWord:', findLongestWord('May the force be with you')); // 'force'
