@@ -7,10 +7,7 @@
 'use strict';
 const checkForSpam = function (message) {
   const checkText = message.toLowerCase();
-  if (checkText.includes('spam') || checkText.includes('sale')) {
-    return true;
-  }
-  return false;
+  return (checkText.includes('spam') || checkText.includes('sale'));
 };
 
 /*

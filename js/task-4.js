@@ -8,10 +8,7 @@
 'use strict';
 const formatString = function (string) {
   console.log(string.length);
-  if (string.length > 40) {
-    return string.slice(0, 40) + '...';
-  }
-  return string;
+  return string.length > 40 ? (string.slice(0, 40) + '...') : string;
 };
 
 /*
